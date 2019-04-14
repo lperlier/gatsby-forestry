@@ -21,7 +21,7 @@ sections:
   path: src/pages/projets
   label: Projets
   create: documents
-  match: "**/*"
+  match: "*.md"
 - type: heading
   label: Config
 - type: document
