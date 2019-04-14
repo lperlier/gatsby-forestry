@@ -1,5 +1,5 @@
 ---
-title: 'Home Page '
+title: Homepage
 template: blocks
 blocks:
 - template: block__hero
