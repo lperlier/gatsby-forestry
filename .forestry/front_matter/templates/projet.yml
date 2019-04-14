@@ -1,4 +1,16 @@
 ---
 label: Projet
 hide_body: true
-fields: []
+fields:
+- type: textarea
+  name: description
+  label: Description
+  description: Description du projet
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: image_gallery
+  name: gallery
+  label: Gallerie
+  description: Images du projet
