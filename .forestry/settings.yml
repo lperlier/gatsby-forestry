@@ -15,14 +15,6 @@ sections:
   templates:
   - page
   - blocks-page
-- type: directory
-  path: src/pages/posts
-  label: Posts
-  create: documents
-  match: "**/*"
-  new_doc_ext: md
-  templates:
-  - post
 - type: heading
   label: Projets
 - type: directory
