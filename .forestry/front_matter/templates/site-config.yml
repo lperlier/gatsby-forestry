@@ -17,12 +17,3 @@ fields:
   type: textarea
   hidden: false
   default: ''
-- name: footer
-  label: Footer
-  type: textarea
-  config:
-    wysiwyg: true
-    schema:
-      format: inline_html
-  hidden: false
-  default: ''
