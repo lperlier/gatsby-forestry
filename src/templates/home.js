@@ -11,7 +11,7 @@ import Feature from '../components/blocks/feature'
 import CTA from '../components/blocks/cta'
 import Hero from '../components/blocks/hero'
 
-class BlocksTemplate extends React.Component {
+class Homepage extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
@@ -43,7 +43,7 @@ class BlocksTemplate extends React.Component {
   }
 }
 
-export default BlocksTemplate
+export default Homepage
 
 export const pageQuery = graphql`
   query BlockPageBySlug($slug: String!) {

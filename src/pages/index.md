@@ -1,6 +1,6 @@
 ---
-title: Homepage
-template: blocks
+title: 'Home Page '
+template: home
 blocks:
 - template: block__hero
   component: hero
