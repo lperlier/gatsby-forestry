@@ -26,5 +26,3 @@ fields:
   name: gallery
   label: Gallerie
   description: Images du projet
-pages:
-- src/projets/iceland-trip.md
