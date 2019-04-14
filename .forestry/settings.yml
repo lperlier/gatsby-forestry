@@ -18,7 +18,7 @@ sections:
 - type: heading
   label: Projets
 - type: directory
-  path: src/projets
+  path: src/pages/projets
   label: Projets
   create: documents
   match: "**/*"
