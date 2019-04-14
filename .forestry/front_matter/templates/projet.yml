@@ -1,7 +1,12 @@
 ---
 label: Projet
 hide_body: true
+display_field: title
 fields:
+- type: text
+  name: title
+  label: Titre
+  description: Titre du projet
 - type: textarea
   name: description
   label: Description
