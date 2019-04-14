@@ -1,5 +1,5 @@
 ---
-title: À propos
+title: About us
 
 ---
 À propos de mon site
