@@ -25,3 +25,5 @@ fields:
   name: gallery
   label: Gallerie
   description: Images du projet
+pages:
+- src/pages/projets/iceland.md
