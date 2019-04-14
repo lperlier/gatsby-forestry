@@ -1,14 +1,13 @@
 ---
 label: Projet
 hide_body: true
-display_field: title
 fields:
 - type: text
   name: template
-  label: template
+  label: Template
   hidden: true
   config:
-    required: true
+    required: false
   default: projet
 - type: text
   name: title
