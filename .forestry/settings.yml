@@ -24,6 +24,13 @@ sections:
   templates:
   - post
 - type: heading
+  label: Projets
+- type: directory
+  path: src/projets
+  label: Projets
+  create: documents
+  match: "**/*"
+- type: heading
   label: Config
 - type: document
   path: src/data/main_menu.json
