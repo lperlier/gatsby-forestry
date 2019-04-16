@@ -5,19 +5,23 @@ import { graphql } from 'gatsby'
 
 import { PageHeader } from 'components/page/PageHeader'
 import { PageContent } from 'components/page/PageContent'
+import { YSWYWContent } from 'components/page/YSWYWContent'
 
 export default class ListTemplate extends React.Component {
   render() {
     
     const post = this.props.data.markdownRemark
     const childPosts = this.props.pageContext.children
+    
+    console.log(post.html);
 
     return (
       <>
       
         <main className="Archive">
           <PageHeader>
-            <h1>Archive : {post.frontmatter.title}</h1>
+            <h1>{post.frontmatter.title}</h1>
+            <YSWYWContent html={post.html}/>
           </PageHeader>
           <PageContent>
             {childPosts.map((child, index) => (

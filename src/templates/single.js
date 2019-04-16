@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 
 import { PageHeader } from 'components/page/PageHeader'
 import { PageContent } from 'components/page/PageContent'
+import { YSWYWContent } from 'components/page/YSWYWContent'
 
 export default class SinglePost extends React.Component {
   render() {
@@ -21,7 +22,7 @@ export default class SinglePost extends React.Component {
           )}
         </PageHeader>
         <PageContent >
-          <div className="wswyg__content" dangerouslySetInnerHTML={{ __html: post.html }} />
+          <YSWYWContent html={post.html}/>
         </PageContent>
         
       </main>

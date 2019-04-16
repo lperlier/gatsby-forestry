@@ -28,25 +28,3 @@ code {
   padding:0.25em 0.4em;
   @include rounded(3px);
 }
-
-.wswyg__content {
-  
-  > *+* {
-    margin-top:30px;
-  }
-  
-  ul, ol {
-    @extend p;
-    padding-left:20px;
-    list-style-type: disc;
-  }
-  
-  ol {
-    list-style-type:decimal;
-  }
-  
-  a {
-    color:$linksColor;
-  }
-  
-}
