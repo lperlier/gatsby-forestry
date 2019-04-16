@@ -1,4 +1,10 @@
 ---
 label: Homepage
 hide_body: true
-fields: []
+fields:
+- type: text
+  name: title
+  label: Titre
+- type: text
+  name: subtitle
+  label: Sous-titre
