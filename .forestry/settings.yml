@@ -13,8 +13,8 @@ sections:
   match: "*.md"
   new_doc_ext: md
   templates:
+  - homepage
   - page
-  - blocks-page
 - type: heading
   label: Projets
 - type: directory
@@ -22,6 +22,8 @@ sections:
   label: Projets
   create: documents
   match: "*.md"
+  templates:
+  - projet
 - type: heading
   label: Config
 - type: document
