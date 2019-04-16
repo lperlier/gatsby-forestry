@@ -1,5 +1,6 @@
 ---
-title: 'Hello Bitches!'
-subtitle: 'STARTER PACK GATSBY'
+title: Hello Bitches!
+subtitle: Starter pack gatsby
 template: home
+
 ---
