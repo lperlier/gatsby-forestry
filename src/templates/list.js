@@ -1,53 +1,43 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 // eslint-disable-next-line
-import { Link, graphql } from 'gatsby'
+import { Link } from "gatsby"
+import { graphql } from 'gatsby'
 
-import Layout from '../components/layout'
-import PostList from '../components/post-list'
+import { PageHeader } from 'components/page/PageHeader'
+import { PageContent } from 'components/page/PageContent'
 
-class ListTemplate extends React.Component {
+export default class ListTemplate extends React.Component {
   render() {
+    
     const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const siteDescription = post.excerpt
     const childPosts = this.props.pageContext.children
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <Helmet
-          htmlAttribute={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={`${post.frontmatter.title} | ${siteTitle}`}
-        />
-        <section className="section page-content">
-          <div class="container article-header has-text-centered">
-            <h1 class="title is-1">{post.frontmatter.title}</h1>
-            <hr />
-          </div>
-          <main className="container content-container">
-            <div
-              className="content"
-              dangerouslySetInnerHTML={{ __html: post.html }}
-            />
-            <hr />
-            <PostList posts={childPosts} />
-          </main>
-        </section>
-      </Layout>
+      <>
+      
+        <main className="Archive">
+          <PageHeader>
+            <h1>Archive : {post.frontmatter.title}</h1>
+          </PageHeader>
+          <PageContent>
+            {childPosts.map((child, index) => (
+              <article key={index}>
+                <Link to={child.node.fields.slug}>
+                  <h3>{child.node.frontmatter.title}</h3>
+                  <p>{child.node.excerpt}</p>
+                </Link>
+              </article>
+            ))}
+          </PageContent>
+        </main>
+        
+      </>
     )
   }
 }
 
-export default ListTemplate
-
 export const pageQuery = graphql`
   query ListPageBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt

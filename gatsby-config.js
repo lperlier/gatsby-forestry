@@ -1,11 +1,11 @@
+const path = require('path');
 const config = require('./site-config.json')
 
 module.exports = {
   pathPrefix: process.env.PATH_PREFIX || '/',
   siteMetadata: {
     title: config.title,
-    description: config.description,
-    footer: config.footer,
+    description: config.description
   },
   plugins: [
     {
@@ -45,31 +45,40 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
-    {
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
+    `gatsby-plugin-sass`,
+    /*{
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
+    },*/
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: path.resolve(__dirname, 'src/assets/svg'),
+        },
+      },
     },
-    `gatsby-plugin-feed`,
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `Gatsby Starter Blog`,
-    //     short_name: `GatsbyJS`,
-    //     start_url: `/`,
-    //     background_color: `#ffffff`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     icon: `src/assets/gatsby-icon.png`,
-    //   },
-    // },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    'gatsby-transformer-json',
-    'gatsby-plugin-sass',
-    'gatsby-plugin-catch-links',
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        src: path.join(__dirname, 'src'),
+        utils: path.join(__dirname, 'src/utils'),
+        components: path.join(__dirname, 'src/components'),
+        assets: path.join(__dirname, 'src/assets'),
+        styles: path.join(__dirname, 'src/styles'),
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: require.resolve('./src/components/app-layout/AppLayout.js'),
+      },
+    },
   ],
 }

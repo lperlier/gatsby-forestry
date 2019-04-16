@@ -1,0 +1,15 @@
+@import '~styles/config';
+
+.PageHeader {
+  
+  padding-top:40vh;
+  margin-bottom:10vh;
+  
+  h2 {
+    @include font-vw(32px, 1920);
+    letter-spacing: 0.2em;
+    text-transform:uppercase;
+    font-weight:300;
+  }
+  
+}

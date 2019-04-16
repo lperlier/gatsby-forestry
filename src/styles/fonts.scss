@@ -1,0 +1,52 @@
+h1 {
+  @include font-vw(100px, $deskXXL);
+  font-weight:900;
+}
+
+h2 {
+  @include font-vw(50px, $deskXXL);
+  font-weight:900;
+  margin-bottom:30px;
+}
+
+h3 {
+  @include font-vw(32px, $deskXXL);
+  font-weight:900;
+}
+
+p {
+  @include font-vw(16px, $deskXXL);
+  line-height:1.6;
+}
+
+em {
+  font-style:italic;
+}
+
+code {
+  background:$grey;
+  padding:0.25em 0.4em;
+  @include rounded(3px);
+}
+
+.wswyg__content {
+  
+  > *+* {
+    margin-top:30px;
+  }
+  
+  ul, ol {
+    @extend p;
+    padding-left:20px;
+    list-style-type: disc;
+  }
+  
+  ol {
+    list-style-type:decimal;
+  }
+  
+  a {
+    color:$linksColor;
+  }
+  
+}
