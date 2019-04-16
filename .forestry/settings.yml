@@ -23,6 +23,7 @@ sections:
   create: documents
   match: "*.md"
   templates:
+  - page
   - projet
 - type: heading
   label: Config
