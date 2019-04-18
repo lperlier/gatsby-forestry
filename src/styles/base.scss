@@ -31,4 +31,19 @@ body {
   font-size: 1.3rem;
   text-size-adjust: 100%;
   color: $base;
+  
+  html:not(.no-js) &.is-first {
+    visibility: hidden;
+  }
+
+  html:not(.no-js) &.is-loading {
+    overflow: hidden;
+    cursor: progress;
+    height:100vh;
+  }
+  
+  html:not(.no-js) &.is-animating {
+    overflow: hidden;
+    height:100vh;
+  }
 }

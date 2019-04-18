@@ -1,21 +1,18 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-
 import { helmet } from 'utils/helmet';
-import { Header } from 'components/header/Header';
-import { Footer } from 'components/footer/Footer';
 
-import s from './AppLayout.module.scss';
+import { AppContainer } from 'components/container/AppContainer';
 
-export default ({ children }) => (
-
-  <>
-    <div className={s.App}>
-      <Helmet {...helmet} />
-      <Header />
-      {children}
-      <Footer />
-    </div>
-  </>
+export default ({ children }) => {
+    
+    return (
+      <>
+          <AppContainer>
+            <Helmet {...helmet} />
+            {children}
+          </AppContainer>
+      </>
+    )
   
-)
+}

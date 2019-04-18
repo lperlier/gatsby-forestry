@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "classnames-loader": "^2.1.0",
+    "gsap": "^2.1.2",
     "prettier": "^1.15.2"
   },
   "repository": {
